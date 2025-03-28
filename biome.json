@@ -28,7 +28,8 @@
         "useImportType": "off"
       },
       "complexity": {
-        "useArrowFunction": "off"
+        "useArrowFunction": "off",
+        "noStaticOnlyClass": "off"
       },
       "recommended": true,
       "a11y": {
