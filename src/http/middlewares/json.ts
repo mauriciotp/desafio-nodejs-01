@@ -3,6 +3,8 @@ import { IncomingMessage, ServerResponse } from 'node:http'
 declare module 'node:http' {
   interface IncomingMessage {
     body?: unknown
+    params: Record<string, string>
+    query: Record<string, string>
   }
 }
 

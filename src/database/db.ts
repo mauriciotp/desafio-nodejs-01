@@ -28,4 +28,14 @@ export class Database {
   findAll(table: Tables) {
     return this.database[table] ?? []
   }
+
+  delete(table: Tables, id: string) {
+    const rowIndex = this.database[table].findIndex(row => row.id === id)
+
+    if (rowIndex > -1) {
+      this.database[table].splice(rowIndex, 1)
+    } else {
+      throw new Error('Resource not found.')
+    }
+  }
 }
